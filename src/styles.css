@@ -1,0 +1,27 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Wood table & sunbeam */
+.body-bg {
+  position: relative;
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,0.35), transparent 60%),
+    repeating-linear-gradient(25deg, #7B5E3B 0px, #7B5E3B 8px, #6F5231 8px, #6F5231 16px);
+}
+.body-bg::after{
+  content:"";
+  position:absolute; inset:0;
+  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.35), transparent 45%);
+  pointer-events:none;
+}
+
+/* Card flip */
+.preserve-3d { transform-style: preserve-3d; }
+.backface-hidden { backface-visibility: hidden; }
+.card-size { width: min(92vw, 420px); height: min(72vh, 620px); }
+
+/* Scrollbar tidy */
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: #c7b083; border-radius: 999px; }
