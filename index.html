@@ -1,13 +1,154 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Daily Anchor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-  </head>
-  <body class="min-h-screen bg-wood/20 text-navy antialiased">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Daily Anchor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { cream: "#F8F5EE", gold: "#D4AF37", navy: "#0F1B2D", wood: "#7a5b3a" },
+          boxShadow: { card: "0 10px 25px rgba(0,0,0,0.15)", soft: "0 6px 18px rgba(0,0,0,0.12)" },
+          fontFamily: { serif: ["Playfair Display", "serif"], sans: ["Montserrat","system-ui","sans-serif"] }
+        }
+      }
+    }
+  </script>
+  <style>
+    body.body-bg {
+      position: relative;
+      background:
+        radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,0.35), transparent 60%),
+        repeating-linear-gradient(25deg, #7B5E3B 0px, #7B5E3B 8px, #6F5231 8px, #6F5231 16px);
+    }
+    body.body-bg::after{
+      content:"";
+      position:absolute; inset:0;
+      background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.35), transparent 45%);
+      pointer-events:none;
+    }
+    .card-size { width: min(92vw, 420px); height: min(72vh, 620px); }
+  </style>
+</head>
+<body class="body-bg min-h-screen text-navy antialiased">
+  <div id="root"></div>
+
+  <script type="module">
+    import React, { useState } from "https://esm.sh/react@18"
+    import { createRoot } from "https://esm.sh/react-dom@18/client"
+    import { AnimatePresence, motion } from "https://esm.sh/framer-motion@11?external=react,react-dom"
+
+    const DECLARATIONS = [
+      "I DECLARE I am strong, healthy, and full of energy. This is my declaration.",
+      "I DECLARE I walk in faith, not fear. This is my declaration.",
+      "I DECLARE abundance and blessing over my life. This is my declaration.",
+      "I DECLARE peace surrounds me and joy fills my heart. This is my declaration.",
+      "I DECLARE my family and loved ones are protected. This is my declaration.",
+      "I DECLARE new doors of opportunity are opening for me. This is my declaration.",
+      "I DECLARE I overcome every challenge through Christ. This is my declaration.",
+      "I DECLARE wisdom and clarity guide my steps. This is my declaration.",
+      "I DECLARE healing and restoration flow through my body. This is my declaration.",
+      "I DECLARE my future is bright and full of hope. This is my declaration."
+    ]
+
+    const rand = (n) => Math.floor(Math.random() * n)
+
+    function Deck({ onDraw, count }) {
+      return (
+        React.createElement("div", { className: "relative flex flex-col items-center" },
+          React.createElement("div", { className: "text-center mb-4 text-cream/90 font-sans" }, "Tap the deck to draw a decree"),
+          React.createElement(motion.button, {
+            onClick: onDraw,
+            className: "relative z-10 rounded-3xl",
+            initial: { y: 0 },
+            animate: { y: [0,-4,0] },
+            transition: { duration: 2.4, repeat: Infinity, ease: "easeInOut" },
+            style: { width: "min(78vw, 360px)", height: "min(60vh, 520px)", background: "linear-gradient(145deg,#efe5cf,#e8dcc2)", border: "1px solid #D4AF37" },
+            "aria-label": "Deck of decrees"
+          },
+            React.createElement("div", { className: "w-full h-full flex flex-col items-center justify-center" },
+              React.createElement("div", { className: "text-gold font-serif text-2xl" }, "The Daily Anchor"),
+              React.createElement("div", { className: "text-navy/70 mt-2 font-sans" }, "Tap to draw")
+            )
+          ),
+          React.createElement("div", { className: "text-center mt-4 text-cream/80 text-sm" }, `Deck size: ${count}`)
+        )
+      )
+    }
+
+    function Card({ item, onAnother }) {
+      const share = async () => {
+        if (navigator.share) {
+          try { await navigator.share({ text: item }) } catch(e){}
+        } else {
+          try { await navigator.clipboard.writeText(item); alert("Copied to clipboard") } catch(e){}
+        }
+      }
+
+      return React.createElement(motion.div, {
+        className: "card-size rounded-3xl bg-cream shadow-card border border-gold/40 p-6 flex flex-col justify-between",
+        initial: { y: 40, opacity: 0, rotateX: -6 },
+        animate: { y: 0, opacity: 1, rotateX: 0 },
+        exit: { y: 40, opacity: 0, rotateX: 6 },
+        transition: { type: "spring", stiffness: 160, damping: 18 },
+        role: "article",
+        "aria-label": "Declaration card"
+      },
+        React.createElement("div", { className: "space-y-4" },
+          React.createElement("div", { className: "flex items-center justify-between" },
+            React.createElement("div", { className: "text-gold font-serif text-xl" }, "The Daily Anchor"),
+            React.createElement("div", { className: "w-8 h-8 rounded-full border border-gold/40 grid place-items-center text-gold", title: "Christian symbol" }, "✝")
+          ),
+          React.createElement("div", { className: "text-[20px] leading-8 font-serif text-navy/95" }, item)
+        ),
+        React.createElement("div", { className: "mt-6 grid grid-cols-2 gap-3" },
+          React.createElement("button", {
+            onClick: onAnother,
+            className: "h-12 rounded-xl bg-navy text-cream font-sans font-semibold hover:opacity-90 transition shadow-soft"
+          }, "Draw Another"),
+          React.createElement("button", {
+            onClick: share,
+            className: "h-12 rounded-xl border border-gold/70 text-navy font-sans font-semibold bg-cream hover:bg-cream/80"
+          }, "Share")
+        )
+      )
+    }
+
+    function App() {
+      const [current, setCurrent] = useState(null)
+
+      const draw = () => { if (DECLARATIONS.length) setCurrent(DECLARATIONS[rand(DECLARATIONS.length)]) }
+      const another = () => { setCurrent(null); setTimeout(draw, 250) }
+
+      return (
+        React.createElement("div", { className: "min-h-screen flex items-center justify-center" },
+          React.createElement("div", { className: "absolute inset-0 bg-black/30" }),
+          React.createElement("div", { className: "relative z-10 w-full max-w-6xl px-4 py-8" },
+            React.createElement("header", { className: "flex items-center justify-between mb-6" },
+              React.createElement("div", { className: "flex items-center gap-3" },
+                React.createElement("div", { className: "text-3xl font-serif text-cream drop-shadow" }, "The Daily Anchor"),
+                React.createElement("div", { className: "hidden sm:block text-cream/80" }, "— Declarations & Decrees")
+              )
+            ),
+            React.createElement("main", { className: "grid place-items-center" },
+              React.createElement(AnimatePresence, { mode: "wait" },
+                !current
+                  ? React.createElement(Deck, { key: "deck", onDraw: draw, count: DECLARATIONS.length })
+                  : React.createElement(Card, { key: "card", item: current, onAnother: another })
+              )
+            ),
+            React.createElement("footer", { className: "mt-8 text-center text-cream/80 text-sm" },
+              React.createElement("span", { className: "font-sans" }, `Deck includes ${DECLARATIONS.length} declarations & decrees.`)
+            )
+          )
+        )
+      )
+    }
+
+    createRoot(document.getElementById("root")).render(React.createElement(App))
+  </script>
+</body>
 </html>
