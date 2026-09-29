@@ -5,28 +5,37 @@ export default function Home() {
   const daily = THEMES[Math.floor(Date.now() / 86400000) % THEMES.length]
   return (
     <div className="flex flex-col gap-16">
-      <section className="pt-8 sm:pt-16 flex flex-col gap-6 max-w-3xl">
-        <div className="flex flex-wrap gap-2">
-          {TEXTS.map((t) => (
-            <span key={t.id} className="inline-flex items-center gap-1.5 rounded-full border border-line px-3 py-1 text-xs text-muted">
-              <span className="h-2 w-2 rounded-full" style={{ background: t.accent }} />
-              {t.name}
-            </span>
-          ))}
+      <section className="pt-8 sm:pt-16 grid gap-10 lg:grid-cols-2 items-center">
+        <div className="flex flex-col gap-6">
+          <div className="flex flex-wrap gap-2">
+            {TEXTS.map((t) => (
+              <span key={t.id} className="inline-flex items-center gap-1.5 rounded-full border border-line px-3 py-1 text-xs text-muted">
+                <span className="h-2 w-2 rounded-full" style={{ background: t.accent }} />
+                {t.name}
+              </span>
+            ))}
+          </div>
+          <h1 className="font-display text-5xl sm:text-7xl lg:text-6xl xl:text-7xl font-bold leading-[0.95] tracking-tight">
+            Five sacred texts.<br />
+            <span className="text-accent">Side by side.</span><br />
+            You decide.
+          </h1>
+          <p className="text-lg text-muted max-w-xl">
+            Read the Bhagavad Gita, Bible, Diamond Sutra, Quran and Torah next to each other. Explore what they share, notice where they
+            differ, and figure out what speaks to you. No agenda, no ranking.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            <a href="#/blind" className="btn-primary">Try a Blind Read</a>
+            <a href="#/themes" className="btn-ghost">Browse themes</a>
+          </div>
         </div>
-        <h1 className="font-display text-5xl sm:text-7xl font-bold leading-[0.95] tracking-tight">
-          Five sacred texts.<br />
-          <span className="text-accent">Side by side.</span><br />
-          You decide.
-        </h1>
-        <p className="text-lg text-muted max-w-xl">
-          Read the Bhagavad Gita, Bible, Diamond Sutra, Quran and Torah next to each other. Explore what they share, notice where they
-          differ, and figure out what speaks to you. No agenda, no ranking.
-        </p>
-        <div className="flex flex-wrap gap-3">
-          <a href="#/blind" className="btn-primary">Try a Blind Read</a>
-          <a href="#/themes" className="btn-ghost">Browse themes</a>
-        </div>
+        <img
+          src="/hero-books.webp"
+          width="1672"
+          height="941"
+          alt="Five glowing books side by side in purple, blue, green, red and gold, marked with a lotus, cross, lotus, crescent and star"
+          className="w-full h-auto"
+        />
       </section>
 
       <section className="grid gap-4 md:grid-cols-3">

@@ -1,11 +1,11 @@
 // The five texts, listed alphabetically so no tradition is placed first.
-// `accent` colours are assigned in alphabetical order and carry no meaning.
+// `accent` colours match the hero artwork and appear in the same alphabetical order.
 export const TEXTS = [
   {
     id: "gita",
     name: "Bhagavad Gita",
     tradition: "Hinduism",
-    accent: "#a78bfa",
+    accent: "#8b5cf6",
     language: "Sanskrit",
     written: "Roughly 2nd century BCE – 2nd century CE (scholarly estimates vary)",
     shape: "700 verses in 18 chapters",
@@ -18,7 +18,7 @@ export const TEXTS = [
     id: "bible",
     name: "Bible",
     tradition: "Christianity",
-    accent: "#7dd3fc",
+    accent: "#3b82f6",
     language: "Hebrew, Aramaic and Greek",
     written: "Roughly 10th century BCE – 1st century CE",
     shape: "66 books (Protestant canon); Catholic and Orthodox Bibles include more",
@@ -31,7 +31,7 @@ export const TEXTS = [
     id: "diamond",
     name: "Diamond Sutra",
     tradition: "Buddhism (Mahayana)",
-    accent: "#5eead4",
+    accent: "#10b981",
     language: "Sanskrit; best known through Chinese",
     written: "Roughly 2nd – 5th century CE (estimates vary); Chinese translation by Kumārajīva, 401 CE",
     shape: "32 short sections",
@@ -45,7 +45,7 @@ export const TEXTS = [
     id: "quran",
     name: "Quran",
     tradition: "Islam",
-    accent: "#fda4af",
+    accent: "#f43f5e",
     language: "Arabic",
     written: "610 – 632 CE",
     shape: "114 surahs (chapters), about 6,200 verses",
@@ -59,7 +59,7 @@ export const TEXTS = [
     id: "torah",
     name: "Torah",
     tradition: "Judaism",
-    accent: "#fcd34d",
+    accent: "#eab308",
     language: "Hebrew",
     written: "Traditionally given to Moses; scholars date its writing to roughly the 10th – 5th century BCE",
     shape: "5 books: Genesis, Exodus, Leviticus, Numbers, Deuteronomy",
