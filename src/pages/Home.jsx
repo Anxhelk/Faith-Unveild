@@ -31,10 +31,10 @@ export default function Home() {
         </div>
         <img
           src="/hero-books.webp"
-          width="1672"
-          height="941"
-          alt="Five glowing books side by side in purple, blue, green, red and gold, marked with a lotus, cross, lotus, crescent and star"
-          className="w-full h-auto"
+          width="1536"
+          height="1024"
+          alt="Five books side by side: the Bhagavad Gita with an Om symbol, the Bible with a cross, the Diamond Sutra with a lotus, the Quran with Arabic calligraphy and a crescent, and the Torah with a Star of David"
+          className="w-full h-auto -my-10 sm:-my-6 lg:my-0"
         />
       </section>
 
