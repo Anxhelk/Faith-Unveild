@@ -1,23 +1,24 @@
 /** @type {import('tailwindcss').Config} */
+const token = (name) => `rgb(var(--${name}) / <alpha-value>)`
+
 export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
-        cream: "#F8F5EE",
-        gold: "#D4AF37",
-        navy: "#0F1B2D",
-        wood: "#7a5b3a",
-      },
-      boxShadow: {
-        "card": "0 10px 25px rgba(0,0,0,0.15)",
-        "soft": "0 6px 18px rgba(0,0,0,0.12)"
+        bg: token("bg"),
+        card: token("card"),
+        ink: token("ink"),
+        muted: token("muted"),
+        line: token("line"),
+        accent: token("accent"),
       },
       fontFamily: {
-        serif: ["Playfair Display", "serif"],
-        sans: ["Montserrat", "system-ui", "sans-serif"]
-      }
+        display: ["'Space Grotesk'", "system-ui", "sans-serif"],
+        serif: ["Fraunces", "Georgia", "serif"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+      },
     },
   },
   plugins: [],
-};
+}

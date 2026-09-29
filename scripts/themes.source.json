@@ -1,0 +1,182 @@
+[
+  {
+    "id": "neighbor",
+    "title": "Love Your Neighbor",
+    "hook": "Who counts as 'my people'?",
+    "common": "All five ask you to widen your circle of care beyond yourself — toward family, strangers and, in some, every living being.",
+    "differ": "The reason given varies. The Torah and Quran present it as God's command; Jesus sums up 'the law and the prophets' with it; the Gita grounds it in seeing one Self in everyone; the Diamond Sutra goes further and asks you to drop the line between self and other altogether.",
+    "reflect": "Whose 'neighbor' are you finding it hardest to be right now?",
+    "passages": [
+      { "text": "gita", "ref": ["Bhagavad Gita", 6, [32]] },
+      { "text": "bible", "ref": ["Matthew", 7, [12]] },
+      { "text": "diamond", "reference": "Diamond Sutra §3", "quote": "However many living beings there are — born from eggs, from wombs, from moisture or by transformation; with form or without; with thought or without — I will lead them all to complete liberation. Yet when countless beings have been liberated, in truth no being has been liberated. Why? Because one who holds on to the idea of a self, a person, a being or a life is not a true bodhisattva." },
+      { "text": "quran", "ref": ["Quran", 4, [36]] },
+      { "text": "torah", "ref": ["Leviticus", 19, [18]] }
+    ]
+  },
+  {
+    "id": "equality",
+    "title": "Everyone Is Equal",
+    "hook": "Does status matter to the sacred?",
+    "common": "Each text pushes back on ranking people by birth, tribe or status.",
+    "differ": "The basis differs: shared memory of being strangers (Torah), unity in Christ (Bible), diversity created so people may know one another and judged only by conduct (Quran), the same Self in every creature (Gita), and a truth with 'no high and no low' (Diamond Sutra). Historically, each tradition has also lived with its own hierarchies — worth exploring honestly.",
+    "reflect": "Where do you notice yourself ranking people without meaning to?",
+    "passages": [
+      { "text": "gita", "ref": ["Bhagavad Gita", 5, [18]] },
+      { "text": "bible", "ref": ["Galatians", 3, [28]] },
+      { "text": "diamond", "reference": "Diamond Sutra §23", "quote": "This truth is equal everywhere; it has no high and no low. That is why it is called supreme, perfect awakening." },
+      { "text": "quran", "ref": ["Quran", 49, [13]] },
+      { "text": "torah", "ref": ["Leviticus", 19, [34]] }
+    ]
+  },
+  {
+    "id": "giving",
+    "title": "Give Without Keeping Score",
+    "hook": "Is it still generous if you expect something back?",
+    "common": "Giving is praised everywhere — and so is giving without wanting thanks, credit or return.",
+    "differ": "The Torah and Bible speak of God seeing and blessing the giver; the Quran frames it as giving 'for the sake of Allah only'; the Gita classifies gifts by the giver's intention; the Diamond Sutra asks the giver to let go even of the idea of giving.",
+    "reflect": "What would you give today if nobody could ever find out it was you?",
+    "passages": [
+      { "text": "gita", "ref": ["Bhagavad Gita", 17, [20]] },
+      { "text": "bible", "ref": ["Matthew", 6, [3, 4]] },
+      { "text": "diamond", "reference": "Diamond Sutra §4", "quote": "A bodhisattva should give without clinging to anything — giving without attachment to sights, sounds, smells, tastes, touch or ideas. If one gives without clinging to appearances, the merit is beyond measure, like the boundless space in every direction." },
+      { "text": "quran", "ref": ["Quran", 76, [8, 9]] },
+      { "text": "torah", "ref": ["Deuteronomy", 15, [10, 11]] }
+    ]
+  },
+  {
+    "id": "enemies",
+    "title": "Answer Harm With Good",
+    "hook": "What do you owe someone who hurt you?",
+    "common": "None of the five treat revenge as the ideal. Each points toward help, goodwill or freedom from hatred — even toward an opponent.",
+    "differ": "The Torah gives a concrete case (help your enemy's struggling animal); Jesus says to love and pray for enemies; the Quran says to repel evil with something better; the Gita describes the ideal person as hating no creature; the Diamond Sutra tells of staying free of anger while being harmed. All five also contain teachings about justice and self-defence, so read them in context.",
+    "reflect": "Is there someone you could do one small good thing for, even though you're not okay with them?",
+    "passages": [
+      { "text": "gita", "ref": ["Bhagavad Gita", 12, [13, 14]] },
+      { "text": "bible", "ref": ["Matthew", 5, [44, 45]] },
+      { "text": "diamond", "reference": "Diamond Sutra §14", "quote": "Long ago, when the King of Kalinga cut my body apart, I had no idea of a self, a person, a being or a life. If I had held on to those ideas while my limbs were being cut off, anger and hatred would have arisen in me." },
+      { "text": "quran", "ref": ["Quran", 41, [34]] },
+      { "text": "torah", "ref": ["Exodus", 23, [4, 5]] }
+    ]
+  },
+  {
+    "id": "forgive",
+    "title": "Forgive",
+    "hook": "Is forgiving the same as forgetting?",
+    "common": "Forgiveness shows up as a quality of the Divine, a duty for people, or both.",
+    "differ": "In the Torah, God's mercy sits side by side with justice that 'will by no means clear the guilty'. Jesus links being forgiven to forgiving others; the Quran does too, asking the generous to pardon. The Gita lists forgiveness among 'divine' qualities of character. The Diamond Sutra doesn't discuss forgiveness directly — its focus is on not creating the resentment in the first place (see 'Answer Harm With Good').",
+    "reflect": "What would change for you if you let one grudge go this week?",
+    "passages": [
+      { "text": "gita", "ref": ["Bhagavad Gita", 16, [3]] },
+      { "text": "bible", "ref": ["Matthew", 6, [14, 15]] },
+      { "text": "diamond", "none": "No close parallel in the Diamond Sutra. That's a real difference worth noticing, not a gap to paper over." },
+      { "text": "quran", "ref": ["Quran", 24, [22]] },
+      { "text": "torah", "ref": ["Exodus", 34, [6, 7]] }
+    ]
+  },
+  {
+    "id": "humble",
+    "title": "Stay Humble",
+    "hook": "Who actually did the thing you're proud of?",
+    "common": "Every text warns against pride and against taking full credit for your own success.",
+    "differ": "The Torah and Quran point you back to God as the source; the Bible promises a reversal where the humble are lifted; the Gita says ego mistakes itself for the doer; the Diamond Sutra says even thinking 'I have attained' is a trap.",
+    "reflect": "Name one person or thing that made your last win possible.",
+    "passages": [
+      { "text": "gita", "ref": ["Bhagavad Gita", 3, [27]] },
+      { "text": "bible", "ref": ["Matthew", 23, [12]] },
+      { "text": "diamond", "reference": "Diamond Sutra §9", "quote": "Subhūti said: If an arhat were to think, 'I have attained arhatship,' he would be holding on to a self, a person, a being and a life. World-Honoured One, I do not think, 'I am an arhat free from desire.'" },
+      { "text": "quran", "ref": ["Quran", 25, [63]] },
+      { "text": "torah", "ref": ["Deuteronomy", 8, [17, 18]] }
+    ]
+  },
+  {
+    "id": "truth",
+    "title": "Speak the Truth",
+    "hook": "Is a 'harmless' lie ever harmless?",
+    "common": "Honesty is a basic expectation in all five.",
+    "differ": "The Torah lists lying alongside stealing; the Bible grounds honesty in belonging to one another; the Quran warns against mixing truth with falsehood or hiding it; the Gita adds that truthful speech should also be kind and helpful; the Diamond Sutra describes the Awakened One as someone who never deceives.",
+    "reflect": "Is there something true you've been avoiding saying?",
+    "passages": [
+      { "text": "gita", "ref": ["Bhagavad Gita", 17, [15]] },
+      { "text": "bible", "ref": ["Ephesians", 4, [25]] },
+      { "text": "diamond", "reference": "Diamond Sutra §14", "quote": "The Tathāgata speaks what is true, what is real, what is as it is. He does not deceive, and he does not say otherwise." },
+      { "text": "quran", "ref": ["Quran", 2, [42]] },
+      { "text": "torah", "ref": ["Leviticus", 19, [11]] }
+    ]
+  },
+  {
+    "id": "peace",
+    "title": "Finding Inner Peace",
+    "hook": "Where does peace actually come from?",
+    "common": "Peace is offered as something deeper than circumstances going well.",
+    "differ": "In the Torah it is a blessing received from God; Jesus offers a peace 'not as the world gives'; the Quran finds rest for the heart in remembering God; the Gita finds it in letting go of craving; the Diamond Sutra in a mind that 'dwells nowhere' — not grabbing onto anything.",
+    "reflect": "What's one thing you're gripping tightly that you could loosen today?",
+    "passages": [
+      { "text": "gita", "ref": ["Bhagavad Gita", 2, [70, 71]] },
+      { "text": "bible", "ref": ["John", 14, [27]] },
+      { "text": "diamond", "reference": "Diamond Sutra §10", "quote": "A bodhisattva should give rise to a pure mind that does not dwell on sights, sounds, smells, tastes, touch or ideas. One should give rise to a mind that dwells nowhere." },
+      { "text": "quran", "ref": ["Quran", 13, [28]] },
+      { "text": "torah", "ref": ["Numbers", 6, [24, 26]] }
+    ]
+  },
+  {
+    "id": "letgo",
+    "title": "Don't Cling",
+    "hook": "Do you own your stuff, or does it own you?",
+    "common": "All five warn that grasping — for things, results or even ideas — pulls you off course.",
+    "differ": "The Torah forbids coveting what belongs to others; the Bible contrasts earthly and heavenly treasure; the Quran asks for calm in both loss and gain; the Gita asks you to act fully while releasing the outcome; the Diamond Sutra says even its own teaching is a raft to be left behind once you've crossed.",
+    "reflect": "What result are you so attached to that it's stressing you out?",
+    "passages": [
+      { "text": "gita", "ref": ["Bhagavad Gita", 2, [47, 48]] },
+      { "text": "bible", "ref": ["Matthew", 6, [19, 21]] },
+      { "text": "diamond", "reference": "Diamond Sutra §6", "quote": "Know that my teaching is like a raft. Even the teaching must be let go of — how much more what is not the teaching." },
+      { "text": "quran", "ref": ["Quran", 57, [23]] },
+      { "text": "torah", "ref": ["Exodus", 20, [14]] }
+    ]
+  },
+  {
+    "id": "impermanence",
+    "title": "Everything Passes",
+    "hook": "What lasts when everything changes?",
+    "common": "Each text is clear that bodies, feelings and the world as we see it do not last.",
+    "differ": "What they say remains is different: the Torah reminds us we return to dust; the Bible and Quran point to what is eternal — the unseen, the 'Countenance of thy Lord'; the Gita says endure the passing and know the Self; the Diamond Sutra asks you simply to see all conditioned things as a dream or a flash of lightning.",
+    "reflect": "If this worry won't matter in five years, how much energy should it get today?",
+    "passages": [
+      { "text": "gita", "ref": ["Bhagavad Gita", 2, [14]] },
+      { "text": "bible", "ref": ["2 Corinthians", 4, [18]] },
+      { "text": "diamond", "reference": "Diamond Sutra §32", "quote": "All conditioned things are like a dream, an illusion, a bubble, a shadow; like dew, or a flash of lightning. See them in this way." },
+      { "text": "quran", "ref": ["Quran", 55, [26, 27]] },
+      { "text": "torah", "ref": ["Genesis", 3, [19]] }
+    ]
+  },
+  {
+    "id": "beyond",
+    "title": "Beyond Appearances",
+    "hook": "Can the sacred be seen?",
+    "common": "All five warn against confusing the ultimate with something you can see or picture.",
+    "differ": "For the Torah, Bible and Quran this is about a personal God who has no visible form. The Gita speaks of an Unmanifest reality behind all forms. The Diamond Sutra, which doesn't teach a creator God, says all appearances are illusory — and seeing that is seeing the Awakened One.",
+    "reflect": "What image of 'God' or 'the sacred' did you grow up with? Where did it come from?",
+    "passages": [
+      { "text": "gita", "ref": ["Bhagavad Gita", 7, [24]] },
+      { "text": "bible", "ref": ["John", 4, [24]] },
+      { "text": "diamond", "reference": "Diamond Sutra §5", "quote": "All appearances are illusory. If you see that all appearances are not appearances, then you see the Tathāgata." },
+      { "text": "quran", "ref": ["Quran", 6, [103]] },
+      { "text": "torah", "ref": ["Deuteronomy", 4, [12]] }
+    ]
+  },
+  {
+    "id": "life",
+    "title": "Life, Death and After",
+    "hook": "What happens when we die?",
+    "common": "Every tradition takes death seriously and says how you live now matters.",
+    "differ": "This is where the texts differ most. The Torah passage stresses choosing life here and now; the Bible centres on resurrection through Jesus; the Quran on a Day of Judgement and paradise; the Gita on an eternal Self taking new bodies; the Diamond Sutra doesn't address the afterlife directly and instead questions the idea of a lasting self at all.",
+    "reflect": "What do you actually believe happens after death — and what shaped that belief?",
+    "passages": [
+      { "text": "gita", "ref": ["Bhagavad Gita", 2, [22]] },
+      { "text": "bible", "ref": ["John", 11, [25, 26]] },
+      { "text": "diamond", "none": "The Diamond Sutra doesn't describe an afterlife. Its concern is seeing through the idea of a fixed self. It's a genuine difference, so it's left blank." },
+      { "text": "quran", "ref": ["Quran", 3, [185]] },
+      { "text": "torah", "ref": ["Deuteronomy", 30, [19]] }
+    ]
+  }
+]

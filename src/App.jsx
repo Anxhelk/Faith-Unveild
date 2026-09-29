@@ -1,82 +1,64 @@
+import { useRoute } from "./lib/router.js"
+import Home from "./pages/Home.jsx"
+import Themes from "./pages/Themes.jsx"
+import Theme from "./pages/Theme.jsx"
+import Blind from "./pages/Blind.jsx"
+import Search from "./pages/Search.jsx"
+import Texts from "./pages/Texts.jsx"
 
-import React, { useMemo, useRef, useState } from "react"
-import { AnimatePresence } from "framer-motion"
-import Deck from "./components/Deck.jsx"
-import Card from "./components/Card.jsx"
-import PROMISES from "./data/promises.json"
-import { parsePDFToCards } from "./utils/pdf.js"
-
-const rand = (n) => Math.floor(Math.random() * n)
+const NAV = [
+  ["themes", "Themes"],
+  ["blind", "Blind", " Read"],
+  ["search", "Search"],
+  ["texts", "Texts"],
+]
 
 export default function App() {
-  const [pdfCards, setPdfCards] = useState([])
-  const [current, setCurrent] = useState(null)
-  const fileRef = useRef(null)
+  const { path, query } = useRoute()
+  const [page, arg] = path
 
-  const deck = useMemo(() => {
-    // merge & tag
-    const promises = PROMISES.map(p => ({ ...p, source: "promise" }))
-    return [...promises, ...pdfCards]
-  }, [pdfCards])
+  let content
+  if (page === "themes") content = <Themes />
+  else if (page === "theme") content = <Theme id={arg} />
+  else if (page === "blind") content = <Blind />
+  else if (page === "search") content = <Search query={query} />
+  else if (page === "texts") content = <Texts />
+  else content = <Home />
 
-  const draw = () => {
-    if (deck.length === 0) return
-    const idx = rand(deck.length)
-    setCurrent(deck[idx])
-  }
-
-  const another = () => {
-    setCurrent(null)
-    setTimeout(draw, 250)
-  }
-
-  const onUpload = async (e) => {
-    const file = e.target.files?.[0]
-    if (!file) return
-    const items = await parsePDFToCards(file)
-    setPdfCards(items)
-    setCurrent(null)
-  }
+  const current = page === "theme" ? "themes" : page
 
   return (
-    <div className="body-bg min-h-screen flex items-center justify-center">
-      <div className="absolute inset-0 bg-black/30" />
-      <div className="relative z-10 w-full max-w-6xl px-4 py-8">
-        <header className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-3">
-            <div className="text-3xl font-serif text-cream drop-shadow">Faith Unveiled</div>
-            <div className="hidden sm:block text-cream/80">— Prayers, Declarations & Promises</div>
+    <div className="min-h-screen flex flex-col">
+      <header className="sticky top-0 z-20 border-b border-line bg-bg/80 backdrop-blur">
+        <nav className="mx-auto max-w-7xl px-4 h-16 flex items-center gap-2">
+          <a href="#/" className="font-display text-lg sm:text-xl font-bold tracking-tight shrink-0">
+            my<span className="text-accent">faith</span>
+          </a>
+          <div className="flex-1 flex justify-end gap-0.5 sm:gap-1">
+            {NAV.map(([id, label, extra]) => (
+              <a
+                key={id}
+                href={`#/${id}`}
+                className={`shrink-0 rounded-full px-1.5 min-[360px]:px-2 sm:px-3 py-1.5 text-[13px] sm:text-sm transition ${current === id ? "bg-ink text-bg" : "text-muted hover:text-ink"}`}
+              >
+                {label}
+                {extra && <span className="hidden sm:inline">{extra}</span>}
+              </a>
+            ))}
           </div>
-          <div className="flex items-center gap-3">
-            <input
-              ref={fileRef}
-              type="file"
-              accept="application/pdf"
-              onChange={onUpload}
-              className="hidden" />
-            <button
-              onClick={() => fileRef.current?.click()}
-              className="h-11 px-4 rounded-xl bg-cream text-navy font-sans font-semibold shadow-soft hover:opacity-90"
-              title="Upload a PDF of prayers/declarations to add to the deck">
-              Upload PDF
-            </button>
-          </div>
-        </header>
+        </nav>
+      </header>
 
-        <main className="grid place-items-center">
-          <AnimatePresence mode="wait">
-            {!current ? (
-              <Deck key="deck" onDraw={draw} count={deck.length} />
-            ) : (
-              <Card key="card" item={current} onAnother={another} />
-            )}
-          </AnimatePresence>
-        </main>
+      <main className="flex-1 mx-auto w-full max-w-7xl px-4 py-8">{content}</main>
 
-        <footer className="mt-8 text-center text-cream/80 text-sm">
-          <span className="font-sans">Deck includes {PROMISES.length} Bible promises + {pdfCards.length} uploaded declarations.</span>
-        </footer>
-      </div>
+      <footer className="border-t border-line">
+        <div className="mx-auto max-w-7xl px-4 py-6 text-xs text-muted flex flex-col sm:flex-row gap-2 justify-between">
+          <span>My Faith: explore, compare, decide for yourself.</span>
+          <span>
+            Translations: WEB (Bible) · JPS 1917 (Torah) · Pickthall (Quran) · Sivananda (Gita) · plain-English renderings (Diamond Sutra)
+          </span>
+        </div>
+      </footer>
     </div>
   )
 }

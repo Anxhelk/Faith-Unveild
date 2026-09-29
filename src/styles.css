@@ -1,27 +1,38 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Wood table & sunbeam */
-.body-bg {
-  position: relative;
-  background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,0.35), transparent 60%),
-    repeating-linear-gradient(25deg, #7B5E3B 0px, #7B5E3B 8px, #6F5231 8px, #6F5231 16px);
-}
-.body-bg::after{
-  content:"";
-  position:absolute; inset:0;
-  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.35), transparent 45%);
-  pointer-events:none;
+:root {
+  --bg: 250 249 246;
+  --card: 255 255 255;
+  --ink: 17 17 20;
+  --muted: 98 98 110;
+  --line: 226 224 218;
+  --accent: 77 124 15;
+  color-scheme: light;
 }
 
-/* Card flip */
-.preserve-3d { transform-style: preserve-3d; }
-.backface-hidden { backface-visibility: hidden; }
-.card-size { width: min(92vw, 420px); height: min(72vh, 620px); }
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: 11 11 15;
+    --card: 21 21 27;
+    --ink: 244 242 237;
+    --muted: 158 158 170;
+    --line: 42 42 52;
+    --accent: 190 242 100;
+    color-scheme: dark;
+  }
+}
 
-/* Scrollbar tidy */
-*::-webkit-scrollbar { width: 8px; height: 8px; }
-*::-webkit-scrollbar-thumb { background: #c7b083; border-radius: 999px; }
+body {
+  @apply bg-bg text-ink font-sans antialiased;
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center h-12 px-6 rounded-full bg-ink text-bg font-semibold transition hover:opacity-90;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center h-12 px-6 rounded-full border border-line font-semibold transition hover:border-ink/50;
+  }
+}
