@@ -1,27 +1,26 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Wood table & sunbeam */
-.body-bg {
-  position: relative;
-  background:
-    radial-gradient(1200px 600px at 50% -10%, rgba(255,255,255,0.35), transparent 60%),
-    repeating-linear-gradient(25deg, #7B5E3B 0px, #7B5E3B 8px, #6F5231 8px, #6F5231 16px);
-}
-.body-bg::after{
-  content:"";
-  position:absolute; inset:0;
-  background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.35), transparent 45%);
-  pointer-events:none;
+:root {
+  --bg: 255 255 255;
+  --card: 250 250 251;
+  --ink: 17 17 20;
+  --muted: 98 98 110;
+  --line: 229 229 234;
+  --accent: 77 124 15;
+  color-scheme: light;
 }
 
-/* Card flip */
-.preserve-3d { transform-style: preserve-3d; }
-.backface-hidden { backface-visibility: hidden; }
-.card-size { width: min(92vw, 420px); height: min(72vh, 620px); }
+body {
+  @apply bg-bg text-ink font-sans antialiased;
+}
 
-/* Scrollbar tidy */
-*::-webkit-scrollbar { width: 8px; height: 8px; }
-*::-webkit-scrollbar-thumb { background: #c7b083; border-radius: 999px; }
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center h-12 px-6 rounded-full bg-ink text-bg font-semibold transition hover:opacity-90;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center h-12 px-6 rounded-full border border-line font-semibold transition hover:border-ink/50;
+  }
+}
